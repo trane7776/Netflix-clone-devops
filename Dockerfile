@@ -1,4 +1,5 @@
 FROM node:16.17.0-alpine as builder
+RUN echo "nameserver 9.9.9.9" > /etc/resolv.conf
 WORKDIR /app
 COPY ./package.json .
 COPY ./yarn.lock .
